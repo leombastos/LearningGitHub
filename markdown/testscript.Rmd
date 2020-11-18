@@ -1,6 +1,10 @@
 ---
 title: "R Notebook"
-output: html_notebook
+output: 
+  html_document: 
+    toc: yes
+    number_sections: yes
+    keep_md: true
 ---
 
 # Setup
@@ -10,7 +14,32 @@ library(tidyverse)
 library(knitr)
 ```
 
+# Wrangling
+Creating a fake data set where `obs` is the observed grain protein content (%) and `pred` is the predicted grain protein content (%).  
 
-# EDA
+```{r mydf}
+set.seed(156)
+mydf <- tibble(x=rnorm(30,10,2)) %>%
+  mutate(e=rnorm(30,0,2),
+         y=0 + 1*x + e) %>%
+  mutate(across(everything(), ~round(.x, 2))) %>%
+  select(obs=x, pred=y)
+
+mydf
+```
+
+# To-dos  
+## To be done  
+Next steps in this workflow would be to:
+- Create a nice plot (perhaps scatterplot), with 1:1 line, smooth line, and with points colored.
+
+## Done  
+- Included the option `keep_md: true` on the 
+YAML (this makes sure that the md file is maintained, so the script can be nicely displayed by GitHub)
+
+
+
+
+
 
 
