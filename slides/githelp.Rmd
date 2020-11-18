@@ -1,0 +1,122 @@
+---
+title: "Git & GitHub helpers"
+date: '`r Sys.Date()`'
+output:
+  xaringan::moon_reader:
+    seal: false
+    lib_dir: libs
+    css: xaringan-themer.css
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+options(servr.daemon = TRUE)
+```
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+style_duo_accent(
+  primary_color = "#1381B0",
+  secondary_color = "#FF961C",
+  inverse_header_color = "#FFFFFF"
+)
+```
+
+class: center, middle
+
+# Git & GitHub tips  
+## `r icon::fa("github")` [@leombastos](https://github.com/leombastos)  
+## `r icon::fa("github")` [@valentinapereyra](https://github.com/valentinapereyra)  
+
+---
+
+# Project background  
+Leo and Valen created a **private repository** on GitHub named `test`. 
+
+The repository can be reached at [https://github.com/leombastos/test](https://github.com/leombastos/test).  
+
+The **goal** of this repository is for us to explore and learn how to use git and GitHub to work collaboratively.  
+
+--
+
+The project includes the folders:
+- `data`: where datasets live
+- `markdown`: where analysis code lives
+- `output`: where figures and tables live
+- `slides`: where these slides live
+
+--
+
+We will be making extensive reference to the publication [Happy Git and GitHub for the useR](https://happygitwithr.com).
+
+---
+
+# What we have already done  
+1. Leo used the ["New project, GitHub fist"](https://happygitwithr.com/new-github-first.html) approach to create a **remote** private repo on Leo's GitHub.
+
+--
+
+2. Leo created a **local** new project and identified the remote GitHub repository, which was automatically connected and downloaded the files.
+
+--
+
+3. Leo invited Valen to be a collaborator on the `test` **remote** GitHub repo.
+
+--
+
+4. Valen then **cloned** the `test` repo into her **local** computer, entered her credentials to connect local and remote.  
+
+--
+
+5. Leo created some folders and markdown file **locally** and pushed to GitHub, and Valen was able to pull it into her **local** project.  
+
+--
+
+6. Leo created a fake dataset, updated the README, pushed it all, and created issues **remotely**.
+
+---
+
+# What we are doing now  
+## Exploring GitHub `main`   
+--
+
+1. Valen will pull GitHub with Leo's work, and will expand by creating a plot on the `main` remote repo.  
+
+--
+
+2. Leo will pull from GitHub with Valen's work, and will add a linear regression.
+
+--
+
+## Exploring GitHub `branches`  
+--
+
+1. Leo will create a **local** branch, make changes, and submit a pull request to **remote**.
+
+--
+
+2. Leo and Valen will meet to understand the pull request (PR) sctructure on GitHub.  
+
+--
+
+3. Valen will pull newest version, create a **local** branch, and submit a pull request to **remote**.
+
+
+---
+
+# Useful Git/Github commands  
+
+
+
+
+
+
+
+
+
+
+
