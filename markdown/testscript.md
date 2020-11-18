@@ -13,6 +13,9 @@ output:
 # Libraries
 library(tidyverse, verbose = F)
 library(knitr)
+library(readr)
+library(dplyr)
+library(ggplot2)
 ```
 
 # Wrangling
@@ -24,7 +27,6 @@ set.seed(156)
 mydf <- tibble(x=rnorm(30,10,2)) %>%
   mutate(e=rnorm(30,0,2),
          y=0 + 1*x + e) %>%
-  mutate(across(everything(), ~round(.x, 2))) %>%
   select(obs=x, pred=y)
 
 mydf
@@ -46,6 +48,33 @@ mydf
 ## 10 11.2  11.2 
 ## # … with 20 more rows
 ```
+
+
+```r
+ggplot(mydf, aes(x=obs, y=pred))+
+         geom_point(color="blue")+
+  geom_smooth(method = "lm")+
+         geom_abline(intercept = 0, slope = 1)+
+         labs(x="Observed grain protein content (%)", y="Predicted grain protein content (%)")+
+  theme_bw()+
+  scale_y_continuous(limits = c(min=5, max=15))+
+  scale_x_continuous(limits = c(min=5, max=15))
+```
+
+```
+## `geom_smooth()` using formula 'y ~ x'
+```
+
+```
+## Warning: Removed 1 rows containing non-finite values (stat_smooth).
+```
+
+```
+## Warning: Removed 1 rows containing missing values (geom_point).
+```
+
+![](testscript_files/figure-html/unnamed-chunk-1-1.png)<!-- -->
+
 
 # To-dos  
 ## To be done  
