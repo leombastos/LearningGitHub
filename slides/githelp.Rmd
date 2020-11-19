@@ -122,6 +122,7 @@ We will be making extensive reference to the publication [Happy Git and GitHub f
 `git merge –no-ff` to merge and keep commit messages  
 `git branch -d branchName` to delete a merged branch **locally**  
 `git push` to send changes from **local** to **remote**
+`git fetch -p` to remove deleted **remote** branches  
 
 
 ---
