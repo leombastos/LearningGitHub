@@ -110,15 +110,16 @@ We will be making extensive reference to the publication [Happy Git and GitHub f
 
 # Useful Git/Github commands  
 `git pull` to start your work fresh with most recent version  
-`git stage -A` to stage changes
-`git commit -m "commitMessage"` to make a commit 
-
 `git status` to check the status of git
 `git branch` to check active branches **locally**
 `git branch -a` to check active branches **everywhere**
 `git branch branchName` to create a new branch  
 `git checkout branchName` to move to that branch  
 `git checkout -b brancName` to create and move to a new branch  
+
+`git stage -A` to stage changes
+`git commit -m "commitMessage"` to make a commit 
+
 `git merge –no-ff` to merge and keep commit messages  
 `git branch -d branchName` to delete a merged branch **locally**  
 `git push` to send changes from **local** to **remote**
