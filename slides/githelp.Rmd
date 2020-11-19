@@ -134,7 +134,9 @@ We will be making extensive reference to the publication [Happy Git and GitHub f
 - Two workflows:
   - branch, commit, and merge locally before pushing  
   - branch and commit locally, push to merge remotely (pull request)  
-- A pull request can be manually or automatically linked to an issue!  
+- A pull request can be manually or automatically linked to an issue! 
+- To automatically link a PR to an issue, just use a keyword followed by issue number on the PR message on GitHub. For example, you can say **"close issue #10"**, and this will automatically close issue #10. Sweet!  
+
 
   
   
