@@ -1,0 +1,49 @@
+body {
+  margin-top: 0;
+}
+
+h1, h2, h3 {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.remark-slide-content {
+  margin-bottom: 0;
+  margin-top: 0;
+
+}
+
+/* Two-column layout */
+.left-column {
+  width: 20%;
+  height: 92%;
+  float: left;
+  margin-bottom: 0;
+  margin-top: 0;
+
+}
+
+.right-column {
+  width: 75%;
+  float: right;
+  padding-top: 1em;
+  margin-bottom: 0;
+  margin-top: 0;
+
+}
+
+/* Slide Header Background for h1 elements */
+.remark-slide-content.header_background > h1 {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--header-background-color);
+  color: var(--header-background-text-color);
+  padding: 2rem 64px 1.5rem 64px;
+  margin-top: 0;
+  box-sizing: border-box;
+  margin-bottom: 0;
+  margin-top: 0;
+}
