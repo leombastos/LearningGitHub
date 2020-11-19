@@ -122,7 +122,51 @@ We will be making extensive reference to the publication [Happy Git and GitHub f
 - After merging, delete branch  
 - Two workflows:
   - branch, commit, and merge locally before pushing  
-  - branch and commit locally, push to merge remotely (pull request)
+  - branch and commit locally, push to merge remotely (pull request)  
+  
+  
+---
+
+# Workflow 1 - branch, commit, merge **locally**
+
+This workflow is best for cases when there is no one person overseeing the **remote** repo and there is little need for code reviewing before merging.  
+
+--
+
+On your local machine, the steps for this workflow are:  
+1. Launch RStudio project  
+2. Use RStudio terminal to update your local version: `git pull`  
+3. Create a local branch to start your work:   `git checkout -b BranchName`  
+4. Do your work  
+5. Commit multiple times within the branch while working:  
+  `git stage -A`  
+  `git commit -m "message"`  
+6. After done working on branch, move to main: `git checkout main`  
+7. When on main, merge branch with main: `git merge BranchName`  
+8. Delete **local** branch: `git branch -d BranchName`  
+9. Push new **local** main to GitHub: `git push`  
+10. All done! Repeat the cycle for your next task.  
+
+---
+
+# Workflow 2 - branch, commit **locally**, merge **remotely**  
+
+This workflow is best for cases when there is one person overseeing the **remote** repo, whose responsible for code reviewing before merging.  
+
+--
+
+On your local machine, the steps for this workflow are:  
+1. Launch RStudio project  
+2. Use RStudio terminal to update your local version: `git pull`  
+3. Create a local branch to start your work:   `git checkout -b BranchName`  
+4. Do your work  
+5. Commit multiple times within the branch while working:  
+  `git stage -A`  
+  `git commit -m "message"`  
+6. After done working on branch, move to main: `git checkout main`  
+7. When on main, push branch to GitHub: `git push`  
+8. Wait for GitHub reviewer to accept your pull request into the **remote** main repo.  
+9. All done! Repeat the cycle for your next task.
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
