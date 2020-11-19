@@ -111,6 +111,10 @@ We will be making extensive reference to the publication [Happy Git and GitHub f
 `git branch -d branchName` to delete a merged branch **locally**  
 `git push` to send changes from **local** to **remote**  
 `git fetch -p` to remove deleted **remote** branches  
+`git log --oneline` to see summarized list of commits (push `q` to quit console when done)  
+`git diff branch1 branch2` to see differences between 2 branches.  
+
+
 
 
 ---
@@ -125,6 +129,8 @@ We will be making extensive reference to the publication [Happy Git and GitHub f
   - branch and commit locally, push to merge remotely (pull request)  
 - A pull request can be manually or automatically linked to an issue! 
 - To automatically link a PR to an issue, just use a keyword followed by issue number on the PR message on GitHub. For example, you can say **"close issue #10"**, and this will automatically close issue #10. Sweet!  
+- When stuck on terminal, just push `q` on keyboard.  
+
 
 
   
@@ -167,10 +173,9 @@ On your local machine, the steps for this workflow are:
 5. Commit multiple times within the branch while working:  
   `git stage -A`  
   `git commit -m "message"`  
-6. After done working on branch, move to main: `git checkout main`  
-7. When on main, push branch to GitHub: `git push`  
-8. Wait for GitHub reviewer to accept your pull request into the **remote** main repo.  
-9. All done! Repeat the cycle for your next task.
+6. After done working on branch and still on branch, push branch to GitHub: `git push -u origin BranchName`  
+7. Wait for GitHub reviewer to accept your pull request into the **remote** main repo.  
+8. All done! Repeat the cycle for your next task.
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
