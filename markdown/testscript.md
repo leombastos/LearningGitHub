@@ -83,7 +83,8 @@ Next steps in this workflow would be to:
 
 ## Done  
 - Included the option `keep_md: true` on the 
-YAML (this makes sure that the md file is maintained, so the script can be nicely displayed by GitHub)
+YAML (this makes sure that the md file is maintained, so the script can be nicely displayed by GitHub)  
+
 
 
 
