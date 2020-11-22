@@ -51,4 +51,10 @@ h1, h2, h3 {
 .bg-green {
   background-color: #00CC00;
 }
+ 
+/* Link color */
+a, a > code {
+  /*color: #990099;*/
+  text-decoration: underline;
+}
 

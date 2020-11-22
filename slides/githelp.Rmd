@@ -1,5 +1,5 @@
 ---
-title: "Git & GitHub helpers"
+title: "Git & GitHub tips"
 date: '`r Sys.Date()`'
 output:
   xaringan::moon_reader:
@@ -31,8 +31,8 @@ class: center, middle
 # Git & GitHub tips  
 <br>  
 
-## `r icon::fa("github")` [@leombastos](https://github.com/leombastos)  
-## `r icon::fa("github")` [@valentinapereyra](https://github.com/valentinapereyra)  
+## `r icon::fa("github")` [leombastos](https://github.com/leombastos)  
+## `r icon::fa("github")` [valentinapereyra](https://github.com/valentinapereyra)  
 
 ---
 exclude: true  
