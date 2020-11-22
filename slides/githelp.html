@@ -3,7 +3,7 @@
   <head>
     <title>Git &amp; GitHub helpers</title>
     <meta charset="utf-8" />
-    <meta name="date" content="2020-11-19" />
+    <meta name="date" content="2020-11-22" />
     <link href="libs/font-awesome/css/fontawesome-all.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
     <link rel="stylesheet" href="custom.css" type="text/css" />
@@ -25,15 +25,14 @@ class: center, middle
 ## <i class="fab  fa-github "></i> [@valentinapereyra](https://github.com/valentinapereyra)  
 
 ---
+exclude: true  
 
 # Project background  
-Leo and Valen created a **private repository** on GitHub named `test`. 
+Leo and Valen created a **private repository** on GitHub named `LearningGitHub`. 
 
-The repository can be reached at [https://github.com/leombastos/test](https://github.com/leombastos/test).  
+The repository can be reached at [https://github.com/leombastos/LearningGitHub](https://github.com/leombastos/LearningGitHub).  
 
 The **goal** of this repository is for us to explore and learn how to use git and GitHub to work collaboratively.  
-
---
 
 The project includes the folders:
 - `data`: where datasets live
@@ -41,111 +40,82 @@ The project includes the folders:
 - `output`: where figures and tables live
 - `slides`: where these slides live
 
---
-
 We will be making extensive reference to the publication [Happy Git and GitHub for the useR](https://happygitwithr.com).
 
 ---
+exclude: true  
 
 # What we have already done  
 1. Leo used the ["New project, GitHub fist"](https://happygitwithr.com/new-github-first.html) approach to create a **remote** private repo on Leo's GitHub.
 
---
 
 2. Leo created a **local** new project and identified the remote GitHub repository, which was automatically connected and downloaded the files.
 
---
 
 3. Leo invited Valen to be a collaborator on the `test` **remote** GitHub repo.
 
---
 
 4. Valen then **cloned** the `test` repo into her **local** computer, entered her credentials to connect local and remote.  
 
---
 
 5. Leo created some folders and markdown file **locally** and pushed to GitHub, and Valen was able to pull it into her **local** project.  
 
---
 
-6. Leo created a fake dataset, updated the README, pushed it all, and created issues **remotely**.
+6. Leo and Valen made **local** changes and pushed to the **remote** main branch.  
 
----
-
-# What we are doing now  
-## Exploring GitHub `main`   
---
-
-1. Valen will pull GitHub with Leo's work, and will expand by creating a plot on the `main` remote repo.  
-
---
-
-2. Leo will pull from GitHub with Valen's work, and will add a linear regression.
-
---
-
-## Exploring GitHub `branches`  
---
-
-1. Leo will create a **local** branch, make changes, and submit a pull request to **remote**.
-
---
-
-2. Leo and Valen will meet to understand the pull request (PR) sctructure on GitHub.  
-
---
-
-3. Valen will pull newest version, create a **local** branch, and submit a pull request to **remote**.
-
+7. Leo and Valen created new **local** branches using workflows 1 and 2 (next slides).  
 
 ---
+# Getting started  
+Here are some steps to get started with using Git/GitHub.  
 
-# Useful Git/Github commands  
-`git pull` to start your work fresh with most recent version  
-`git status` to check the status of git  
-`git branch` to check active branches **locally**  
-`git branch -a` to check active branches **everywhere**  
-`git branch branchName` to create a new branch  
-`git checkout branchName` to move to that branch  
-`git checkout -b brancName` to create and move to a new branch  
-`git stage -A` to stage changes  
-`git commit -m "commitMessage"` to make a commit  
-`git merge –no-ff` to merge and keep commit messages  
-`git branch -d branchName` to delete a merged branch **locally**  
-`git push` to send changes from **local** to **remote**  
-`git fetch -p` to remove deleted **remote** branches  
-`git log --oneline` to see summarized list of commits (push `q` to quit console when done)  
-`git diff branch1 branch2` to see differences between 2 branches.  
+## **Starting** a collaborative project  
+If you are the person starting a collaborative project, follow one of the workflows below (courtesy of RStudio):  
 
-
-
+1.  [New project, GitHub first](https://happygitwithr.com/new-github-first.html)  
+2.  [Existing project, GitHub first](https://happygitwithr.com/existing-github-first.html)  
+3.  [Existing project, GitHub last](https://happygitwithr.com/existing-github-last.html)  
 
 ---
+# Getting started  
+Here are some steps to get started with using Git/GitHub.  
 
-# Wisdom notes  
-- Commit often (multiple times a day), push less often (once at end of day)  
-- Before pushing, always pull first!  
-- When merging, need to be in branch we want to bring changes to (i.e., main branch).   
-- After merging, delete branch  
-- Two workflows:
-  - branch, commit, and merge locally before pushing  
-  - branch and commit locally, push to merge remotely (pull request)  
-- A pull request can be manually or automatically linked to an issue! 
-- To automatically link a PR to an issue, just use a keyword followed by issue number on the PR message on GitHub. For example, you can say **"close issue #10"**, and this will automatically close issue #10. Sweet!  
-- When stuck on terminal, just push `q` on keyboard.  
-- PR are a feature of GitHub ONLY, and not of git alone (aka, it works only **remotely**).  
-- The workflow **fork-and-clone** is best if you ARE NOT a contributor on a GitHub repo.  
-- The workflow **clone** is best if you ARE a contributor on a GitHub repo.  
+## **Joining** a collaborative project  
+In this case, someone else has already done the work described previously and invited you to collaborate.  
 
+For that, you will need to clone their **remote** repo in your machine.  
 
-
-
-
+`1.` On GitHub, go on the user page, and then on the repo page that you want to clone. Click on the green .bg-green[.white[Clone]] button, select "HTTPS", and click on the <i class="fas  fa-clipboard "></i> button to copy it.  
   
-  
+
+--
+`2.` On terminal, use `cd directory name` to change to your **local** directory where you want to create a copy of the remote repo. For example, if I wanted to copy a remote repo to my desktop, I would type `cd Desktop/` on terminal.  
 ---
 
-# Workflow 1 - branch, commit, merge **locally**
+# Getting started  
+Here are some steps to get started with using Git/GitHub.  
+
+## **Joining** a collaborative project  
+
+`3.` On terminal, and with step 2 done, use `git clone URL`, where URL is the address you copied from GitHub. For example, If I wanted to clone the LearningGitHub repo from my GitHub account, I woould type `git clone https://github.com/leombastos/LearningGitHub.git`. This will create a **local** copy of the repo on your machine.  Now you may launch the RStudio project icon found on the downloaded repo, and start using terminal straight from RStudio!  
+  
+
+--
+`4.` If you have been added on GitHub as a collaborator on this project, you will be able to `git pull` and `git push` from your RStudio terminal pane.  
+  
+
+--
+`5.` The first time you push (on RStudio terminal pane), you may be asked to enter your GitHub account name and password. Do this. When prompted to type your password, the prompt won't show text, so just type it and believe it is being entered.  
+  
+
+--
+`6.` You are all set up and ready to start contributing, pushing and pulling!  
+
+
+---
+
+
+# Workflow 1 - branch &amp; commit &amp; merge **locally**
 
 This workflow is best for cases when there is no one person overseeing the **remote** repo and there is little need for code reviewing before merging.  
 
@@ -167,7 +137,7 @@ On your local machine, the steps for this workflow are:
 
 ---
 
-# Workflow 2 - branch, commit **locally**, merge **remotely**  
+# Workflow 2 - branch &amp; commit **locally**, merge **remotely**  
 
 This workflow is best for cases when there is one person overseeing the **remote** repo, whose responsible for code reviewing before merging.  
 
@@ -183,7 +153,43 @@ On your local machine, the steps for this workflow are:
   `git commit -m "message"`  
 6. After done working on branch and still on branch, push branch to GitHub: `git push -u origin BranchName`  
 7. Wait for GitHub reviewer to accept your pull request into the **remote** main repo.  
-8. All done! Repeat the cycle for your next task.
+8. All done! Repeat the cycle for your next task.  
+
+---
+
+# Useful Git/Github terminal commands  
+`git pull` to start your work fresh with most recent version  
+`git status` to check the status of git  
+`git branch` to check active branches **locally**  
+`git branch -a` to check active branches **everywhere**  
+`git branch branchName` to create a new branch  
+`git checkout branchName` to move to that branch  
+`git checkout -b brancName` to create and move to a new branch  
+`git stage -A` to stage changes  
+`git commit -m "commitMessage"` to make a commit  
+`git merge –no-ff` to merge and keep commit messages  
+`git branch -d branchName` to delete a merged branch **locally**  
+`git push` to send changes from **local** to **remote**  
+`git fetch -p` to remove deleted **remote** branches  
+`git log --oneline` to see summarized list of commits (push `q` to quit console when done)  
+`git diff branch1 branch2` to see differences between 2 branches.  
+
+---
+
+# Wisdom notes  
+- Commit often (multiple times a day), push less often (few times a day)  
+- Before pushing, always pull first!  
+- When merging, need to be in branch we want to bring changes to (i.e., main branch).   
+- After merging, delete branch  
+- Two workflows:
+  - branch, commit, and merge locally before pushing  
+  - branch and commit locally, push to merge remotely (pull request)  
+- A pull request can be manually or automatically linked to an issue! 
+- To automatically link a PR to an issue, just use a keyword followed by issue number on the PR message on GitHub. For example, you can say **"close issue #10"**, and this will automatically close issue #10. Sweet!  
+- When stuck on terminal, just push `q` on keyboard.  
+- PR are a feature of GitHub ONLY, and not of git alone (aka, it works only **remotely**).  
+- The workflow **fork-and-clone** is best if you ARE NOT a contributor on a GitHub repo.  
+- The workflow **clone** is best if you ARE a contributor on a GitHub repo.
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
